@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test2" />
+        <module name="google-homepage-test" />
       </profile>
     </annotationProcessing>
   </component>
