@@ -44,5 +44,9 @@ public class GoogleHomePageTest {
         Assert.assertTrue(isLinkDisplayed);
     }
 
-
+    @Test
+    public void KannadaLinkTest() {
+        boolean isLinkDisplayed = driver.findElement(By.linkText("ಕನ್ನಡ")).isDisplayed();
+        Assert.assertTrue(isLinkDisplayed);
+    }
 }
