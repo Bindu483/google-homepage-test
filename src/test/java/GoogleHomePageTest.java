@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -33,16 +34,24 @@ public class GoogleHomePageTest {
 
     @Test
     public void GmailLinkTest() {
-        boolean isLinkDisplayed = driver.findElement(By.linkText("Gmail")).isDisplayed();
-        Assert.assertEquals(true, isLinkDisplayed);
+        WebElement gmailLinkTextElement = driver.findElement(By.linkText("Images"));
+        Assert.assertTrue(gmailLinkTextElement.isDisplayed());
+        Assert.assertTrue(gmailLinkTextElement.isEnabled());
 
     }
 
     @Test
     public void ImageLinkTest() {
-        boolean isLinkDisplayed = driver.findElement(By.linkText("Images")).isDisplayed();
-        Assert.assertTrue(isLinkDisplayed);
+        WebElement imagesLinkTextElement = driver.findElement(By.linkText("Images"));
+        Assert.assertTrue(imagesLinkTextElement.isDisplayed());
+        Assert.assertTrue(imagesLinkTextElement.isEnabled());
+
     }
 
-
+    @Test
+    public void KannadaLinkTest() {
+        WebElement kannadaLinkTextElement = driver.findElement(By.linkText("ಕನ್ನಡ"));
+        Assert.assertTrue(kannadaLinkTextElement.isDisplayed());
+        Assert.assertTrue(kannadaLinkTextElement.isEnabled());
+    }
 }
